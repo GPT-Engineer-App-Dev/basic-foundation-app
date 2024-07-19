@@ -1,29 +1,19 @@
-import { navItems } from "@/nav-items";
 import { Outlet } from "react-router-dom";
-import { DesktopNavbar } from "./_components/DesktopNavbar";
-import { MobileSheet } from "./_components/MobileSheet";
+import { NavLink } from "react-router-dom";
 
 const Layout = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
-        <DesktopNavbar navItems={navItems} />
-        <MobileSheet navItems={navItems} />
+        <nav>
+          <NavLink to="/" className="text-lg font-semibold">Your Company</NavLink>
+        </nav>
       </header>
       <main className="flex-grow overflow-auto">
         <Outlet />
       </main>
       <footer className="border-t bg-background p-4 text-center text-sm text-muted-foreground">
-        <div className="container mx-auto">
-          <p>© 2023 Your Company. All rights reserved.</p>
-          <nav className="mt-2">
-            <ul className="flex justify-center space-x-4">
-              <li><a href="#" className="hover:text-foreground">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-foreground">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-foreground">Contact Us</a></li>
-            </ul>
-          </nav>
-        </div>
+        © 2023 Your Company. All rights reserved.
       </footer>
     </div>
   );
