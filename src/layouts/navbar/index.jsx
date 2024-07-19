@@ -1,23 +1,21 @@
-import { Outlet } from "react-router-dom";
-import { DesktopNavbar } from "./_components/DesktopNavbar";
-import { MobileSheet } from "./_components/MobileSheet";
-import Footer from "./_components/Footer";
-
-const navItems = [
-  { title: "Home", to: "/" },
-];
+import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
-        <DesktopNavbar navItems={navItems} />
-        <MobileSheet navItems={navItems} />
+        <nav>
+          <Link to="/" className="text-lg font-semibold">Your Company</Link>
+        </nav>
       </header>
       <main className="flex-grow overflow-auto">
         <Outlet />
       </main>
-      <Footer />
+      <footer className="border-t bg-background py-6 text-center">
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Your Company. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };

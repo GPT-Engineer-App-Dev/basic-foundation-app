@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const Index = () => {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -9,7 +7,9 @@ const Index = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur
         interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.
       </p>
-      <Button>Get Started</Button>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Get Started
+      </button>
     </div>
   );
 };
