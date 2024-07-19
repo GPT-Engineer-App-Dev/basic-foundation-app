@@ -1,5 +1,5 @@
 import { Home } from "lucide-react";
-import Index from "./pages/Index.jsx";
+import Index from "./pages/Index";
 
 export const navItems = [
   {
