@@ -14,7 +14,16 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer className="border-t bg-background p-4 text-center text-sm text-muted-foreground">
-        © 2023 Your Company. All rights reserved.
+        <div className="container mx-auto">
+          <p>© 2023 Your Company. All rights reserved.</p>
+          <nav className="mt-2">
+            <ul className="flex justify-center space-x-4">
+              <li><a href="#" className="hover:text-foreground">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-foreground">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-foreground">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
       </footer>
     </div>
   );
