@@ -1,11 +1,11 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-gray-800 text-white p-4">
         <nav>
-          <NavLink to="/" className="text-xl font-bold">Your Company</NavLink>
+          <Link to="/" className="text-xl font-bold">Your Company</Link>
         </nav>
       </header>
       <main className="flex-grow container mx-auto px-4 py-8">
