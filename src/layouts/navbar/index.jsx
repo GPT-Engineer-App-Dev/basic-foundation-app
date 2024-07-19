@@ -1,21 +1,21 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from 'react-router-dom';
 
-const Layout = () => {
+function Layout() {
   return (
-    <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
+    <div className="flex flex-col min-h-screen">
+      <header className="bg-gray-800 text-white p-4">
         <nav>
-          <NavLink to="/" className="text-lg font-semibold">Your Company</NavLink>
+          <NavLink to="/" className="text-xl font-bold">Your Company</NavLink>
         </nav>
       </header>
-      <main className="flex-grow overflow-auto">
+      <main className="flex-grow container mx-auto px-4 py-8">
         <Outlet />
       </main>
-      <footer className="border-t bg-background p-4 text-center text-sm text-muted-foreground">
-        © 2023 Your Company. All rights reserved.
+      <footer className="bg-gray-800 text-white p-4 text-center">
+        <p>© 2023 Your Company. All rights reserved.</p>
       </footer>
     </div>
   );
-};
+}
 
 export default Layout;

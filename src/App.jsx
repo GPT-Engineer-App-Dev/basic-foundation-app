@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./layouts/navbar";
-import Index from "./pages/Index";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './layouts/navbar';
+import Home from './pages/Index';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Index />} />
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
