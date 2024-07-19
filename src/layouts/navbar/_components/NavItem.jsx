@@ -10,7 +10,7 @@ export const NavItem = ({ to, children, className }) => (
         isActive
           ? "text-foreground"
           : "text-muted-foreground hover:text-foreground",
-        className,
+        className
       )
     }
   >
